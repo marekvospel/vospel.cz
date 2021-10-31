@@ -1,14 +1,26 @@
 <script>
-    import Navbar from "../components/Navbar.svelte"
+  import Navbar from '../components/Navbar.svelte'
 </script>
 
-<style>
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-</style>
-
-<div class="bg-gray-800 min-h-screen min-w-screen text-white">
-    <Navbar />
-    <slot />
+<div class="min-h-screen min-w-screen text-white">
+  <Navbar />
+  <slot />
 </div>
+
+<style>
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  :global(body) {
+    @apply bg-gray-900;
+  }
+
+  :global(.icon) :global(.primary) {
+    color: #dddddd;
+  }
+
+  :global(.icon) :global(.secondary) {
+    color: #ffffff;
+  }
+</style>
