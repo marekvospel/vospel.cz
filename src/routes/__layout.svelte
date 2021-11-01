@@ -15,12 +15,4 @@
   :global(body) {
     @apply bg-gray-900;
   }
-
-  :global(.icon) :global(.primary) {
-    color: #dddddd;
-  }
-
-  :global(.icon) :global(.secondary) {
-    color: #ffffff;
-  }
 </style>
