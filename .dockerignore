@@ -1,14 +1,11 @@
-.DS_Store
-.idea/
+# Intellij
+.run
+.idea
 
 # Svelte files
 /build
 /.svelte-kit
 /package
-
-# Npm files
-node_modules
-package-lock.json
 
 # Yarn files
 yarn-error.log
