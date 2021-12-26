@@ -1,6 +1,6 @@
 import preprocess from 'svelte-preprocess'
 import nodeAdapter from '@sveltejs/adapter-node'
-import * as Path from 'path'
+import path from 'path'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -23,7 +23,8 @@ const config = {
     vite: {
       resolve: {
         alias: {
-          $utils: Path.parse('src/utils').base,
+          $utils: path.resolve('src/utils'),
+          $stores: path.resolve('src/stores'),
         },
       },
     },

@@ -1,13 +1,12 @@
 <script lang="ts">
   // @ts-ignore
   import { scrollto } from 'svelte-scrollto'
-  import getLanguages, { LangsArray } from '../utils/languages'
+  import { languagesStore } from '$stores/languages.store'
   import { onMount } from 'svelte'
-
-  let languages: LangsArray = {}
+  import { calcLangPercentage, updateLanguages } from '$utils/languages'
 
   onMount(async () => {
-    languages = await getLanguages()
+    await updateLanguages(languagesStore)
   })
 </script>
 
@@ -37,12 +36,10 @@
       <p class="text-xl">
         I'm a front-end developer & Cyber Security student from Czech Republic.
       </p>
-      <br>
-      <p class='text-xl font-bold'>
-        My most frequently used languages:
-      </p>
+      <br />
+      <p class="text-xl font-bold">My most frequently used languages:</p>
       <div class="my-4 grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2">
-        {#each Object.entries(languages)
+        {#each Object.entries(calcLangPercentage($languagesStore))
           .sort((a, b) => b[1] - a[1])
           .slice(0, 10) as language}
           <div
