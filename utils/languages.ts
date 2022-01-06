@@ -1,5 +1,3 @@
-import type { Writable } from 'svelte/store'
-
 const GITHUB_USER = 'marekvospel'
 
 export type LangsArray = {
@@ -7,6 +5,7 @@ export type LangsArray = {
 }
 
 export default async function getLanguages(): Promise<LangsArray> {
+  return null
   return calcLangPercentage(await fetchLanguages())
 }
 
@@ -33,31 +32,6 @@ export async function fetchLanguages(): Promise<LangsArray> {
   return langArray
 }
 
-export async function updateLanguages(
-  languagesStore: Writable<LangsArray>,
-): Promise<void> {
-  const body = await (
-    await fetch(`https://api.github.com/users/${GITHUB_USER}/repos`)
-  ).json()
-
-  if (body.length <= 0) return
-
-  languagesStore.set({})
-
-  for (const repo of body) {
-    const languages: LangsArray = await (await fetch(repo.languages_url)).json()
-
-    if (Object.keys(languages).length <= 0) continue
-
-    for (const lang of Object.entries(languages)) {
-      languagesStore.update((storeLanguages) => {
-        if (!storeLanguages[lang[0]]) storeLanguages[lang[0]] = lang[1]
-        else storeLanguages[lang[0]] += lang[1]
-        return storeLanguages
-      })
-    }
-  }
-}
 export function calcLangPercentage(langs: LangsArray): LangsArray {
   const newLangs: LangsArray = {}
   let total = 0
