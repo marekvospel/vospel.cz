@@ -1,0 +1,26 @@
+name: Deploy
+
+on:
+  workflow_run:
+    workflows: ["Build & deploy docker image CI "]
+    types:
+      - completed
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  deploy-www1:
+    runs-on: ubuntu-latest
+    environment: www1
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: ssh
+        uses: easingthemes/ssh-deploy@v2.2.11
+        with:
+          COMMAND: 'docker-compose -f /var/www/vospel.cz/docker-compose.yml pull && docker-compose -f /var/www/vospel.cz/docker-compose.yml down && docker-compose -f /var/www/vospel.cz/docker-compose.yml up -d'
+          REMOTE_HOST: ${{ secrets.SSH_HOST }}
+          REMOTE_USER: ${{ secrets.SSH_USER }}
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
+      
