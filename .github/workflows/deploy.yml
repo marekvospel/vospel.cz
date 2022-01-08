@@ -22,5 +22,5 @@ jobs:
           command: 'docker-compose -f /var/www/vospel.cz/docker-compose.yml pull && docker-compose -f /var/www/vospel.cz/docker-compose.yml down && docker-compose -f /var/www/vospel.cz/docker-compose.yml up -d'
           host: ${{ secrets.SSH_HOST }}
           user: ${{ secrets.SSH_USER }}
-          privatekey: ${{ secrets.SSH_KEY }}
+          privateKey: ${{ secrets.SSH_KEY }}
       
