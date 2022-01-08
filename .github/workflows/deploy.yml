@@ -23,4 +23,18 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           privateKey: ${{ secrets.SSH_KEY }}
+  deploy-www2:
+    runs-on: ubuntu-latest
+    environment: www2
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: ssh
+        uses: garygrossgarten/github-action-ssh@release
+        with:
+          command: 'docker-compose -f /var/www/vospel.cz/docker-compose.yml pull && docker-compose -f /var/www/vospel.cz/docker-compose.yml down && docker-compose -f /var/www/vospel.cz/docker-compose.yml up -d'
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          privateKey: ${{ secrets.SSH_KEY }}
       
+
