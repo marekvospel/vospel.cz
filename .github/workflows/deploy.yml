@@ -2,7 +2,7 @@ name: Deploy
 
 on:
   workflow_run:
-    workflows: ["Build & deploy docker image CI "]
+    workflows: ["Build & deploy docker image CI"]
     types:
       - completed
 
