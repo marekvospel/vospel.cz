@@ -1,5 +1,6 @@
 .DS_Store
 .idea/
+vospel.cz.iml
 
 # Svelte files
 /build
@@ -18,3 +19,6 @@ yarn-error.log
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+# Project Files
+languages.json

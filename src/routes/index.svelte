@@ -1,13 +1,21 @@
+<script context="module" lang="ts">
+
+  /**
+     * @type {import('@sveltejs/kit').Load}
+     */
+  export async function load({ fetch }) {
+
+    const languages = await fetch('/api/languages')
+
+    return { props: { languages: await languages.json()} };
+  }
+</script>
 <script lang="ts">
   // @ts-ignore
   import { scrollto } from 'svelte-scrollto'
-  import { languagesStore } from '$stores/languages.store'
-  import { onMount } from 'svelte'
-  import { calcLangPercentage, updateLanguages } from '$utils/languages'
 
-  onMount(async () => {
-    await updateLanguages(languagesStore)
-  })
+  export let languages = {}
+
 </script>
 
 <main class="container w-auto mx-auto">
@@ -39,7 +47,7 @@
       <br />
       <p class="text-xl font-bold">My most frequently used languages:</p>
       <div class="my-4 grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2">
-        {#each Object.entries(calcLangPercentage($languagesStore))
+        {#each Object.entries(languages)
           .sort((a, b) => b[1] - a[1])
           .slice(0, 10) as language}
           <div

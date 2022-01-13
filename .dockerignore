@@ -1,6 +1,7 @@
 # Intellij
 .run
 .idea
+vospel.cz.iml
 
 # Svelte files
 /build
@@ -18,3 +19,9 @@ yarn-error.log
 
 # Github
 .github
+
+# npm
+node_modules
+
+# Project files
+languages.json
