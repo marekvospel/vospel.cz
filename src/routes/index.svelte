@@ -1,13 +1,13 @@
 <script context="module" lang="ts">
 
   /**
-     * @type {import('@sveltejs/kit').Load}
-     */
+   * @type {import('@sveltejs/kit').Load}
+   */
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   export async function load({ fetch }) {
-
     const languages = await fetch('/api/languages')
 
-    return { props: { languages: await languages.json()} };
+    return { props: { languages: await languages.json() } }
   }
 </script>
 <script lang="ts">
@@ -15,7 +15,6 @@
   import { scrollto } from 'svelte-scrollto'
 
   export let languages = {}
-
 </script>
 
 <main class="container w-auto mx-auto">
@@ -34,8 +33,8 @@
       >
     </div>
     <img
-      class="w-4/12 max-h-screen hidden md:block"
-      src="/icons/vospelnb.png"
+      class="w-4/12 h-4/12 hidden md:block"
+      src="/icons/{new Date().getMonth() === 11 ? 'vospel-christmas' : 'vospel'}.webp"
       alt="Marek Vospěl"
     />
   </div>
@@ -48,8 +47,8 @@
       <p class="text-xl font-bold">My most frequently used languages:</p>
       <div class="my-4 grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2">
         {#each Object.entries(languages)
-          .sort((a, b) => b[1] - a[1])
-          .slice(0, 10) as language}
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 10) as language}
           <div
             class="flex flex-row justify-between w-full bg-cyan-600 relative"
           >

@@ -4,9 +4,9 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'prettier',
+    'plugin:prettier/recommended',
   ],
-  plugins: ['svelte3', '@typescript-eslint'],
+  plugins: ['svelte3', '@typescript-eslint', 'prettier'],
   ignorePatterns: ['*.cjs'],
   overrides: [
     {
@@ -28,5 +28,6 @@ module.exports = {
   },
   rules: {
     '@typescript-eslint/ban-ts-comment': 'off',
+    'prettier/prettier': ['warn', { usePrettierrc: true }]
   },
 }
