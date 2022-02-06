@@ -42,6 +42,8 @@ pipeline {
                 script {
                     docker.withRegistry('https://ghcr.io', 'ghcr-login') {
                         dockerImage.push('latest')
+                        dockerImage.push(env.GIT_BRANCH)
+                        dockerImage.push(env.GIT_BRANCH + '-' + env.GIT_COMMIT)
                     }
                 }
             }
