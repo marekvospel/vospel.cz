@@ -2,7 +2,7 @@
 
 [![](https://img.shields.io/github/license/marekvospel/vospel.cz)](https://github.com/marekvospel/vospel.cz)
 
-My personal site written in Svelte.
+My personal site written in Svelte.  
 
 ## Running
 This website can be run inside docker with the following command  
