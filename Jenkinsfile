@@ -13,7 +13,6 @@ pipeline {
 
     environment {
         registry = 'ghcr.io/marekvospel/vospel.cz'
-        docketImage = ''
     }
 
     stages {
@@ -32,13 +31,19 @@ pipeline {
 
         stage('Build docker container') {
             steps {
-                dockerImage = docker.build(registry)
+                script {
+                    dockerImage = docker.build(registry)
+                }
             }
         }
 
         stage('Deploy image') {
-            docker.withRegistry('ghcr.io', 'ghcr-login') {
-                dockerImage.push('latest')
+            steps {
+                script {
+                    docker.withRegistry('https://ghcr.io', 'ghcr-login') {
+                        dockerImage.push('latest')
+                    }
+                }
             }
         }
     }
