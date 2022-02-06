@@ -11,6 +11,11 @@ void setBuildStatus(String message, String state) {
 pipeline {
     agent any
 
+    environment {
+        registry = 'ghcr.io/marekvospel/vospel.cz'
+        docketImage = ''
+    }
+
     stages {
         stage('Set build status') {
             steps {
@@ -27,7 +32,13 @@ pipeline {
 
         stage('Build docker container') {
             steps {
-                sh 'docker build -t vospel.cz:latest .'
+                dockerImage = docker.build(registry)
+            }
+        }
+
+        stage('Deploy image') {
+            docker.withRegistry('ghcr.io', 'ghcr-login') {
+                dockerImage.push('latest')
             }
         }
     }
@@ -38,6 +49,10 @@ pipeline {
         }
         failure {
             setBuildStatus("Build failed", "FAILURE");
+        }
+        always {
+            echo 'Cleaning up'
+            deleteDir()
         }
     }
 }
