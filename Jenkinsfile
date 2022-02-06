@@ -8,28 +8,36 @@ void setBuildStatus(String message, String state) {
   ]);
 }
 
-node {
-    def app
+pipeline {
+    agent any
 
-    stage('Set build status') {
-        setBuildStatus("Building...", "PENDING")
-    }
+    stages {
+        stage('Set build status') {
+            steps {
+                setBuildStatus("Building...", "PENDING")
+            }
+        }
 
-    stage('Clone repository') {
-        checkout scm
-    }
+        stage('Clone repository') {
+            steps {
+                checkout scm
+            }
+        }
 
-    stage('Build image') {
-        app = docker.build('vospel.cz')
+
+        stage('Build docker container') {
+            steps {
+                sh 'docker build -t vospel.cz:latest .'
+            }
+        }
     }
 
     post {
         success {
-            setBuildStatus("Build succeeded", "SUCCESS")
+            setBuildStatus("Build succeeded", "SUCCESS");
         }
-
         failure {
-            setBuildStatus("Build Failed", "FAILURE")
+            setBuildStatus("Build failed", "FAILURE");
         }
     }
 }
