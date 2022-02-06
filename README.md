@@ -5,7 +5,7 @@
 My personal site written in Svelte.
 
 ## Running
-This website can be run inside docker with the following command
+This website can be run inside docker with the following command  
 ```shell
 docker run -p 3000:3000 ghcr.io/marekvospel/vospel.cz
 ```
