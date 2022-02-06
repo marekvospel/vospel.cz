@@ -40,10 +40,14 @@ pipeline {
         stage('Deploy image') {
             steps {
                 script {
+                    branch = env.GIT_BRANCH.split("/")[1]
+
                     docker.withRegistry('https://ghcr.io', 'ghcr-login') {
-                        dockerImage.push('latest')
-                        dockerImage.push(env.GIT_BRANCH)
-                        dockerImage.push(env.GIT_BRANCH + '-' + env.GIT_COMMIT)
+                        if (branch == 'main') {
+                            dockerImage.push('latest')
+                        }
+                        dockerImage.push(branch)
+                        dockerImage.push(branch + '-' + env.GIT_COMMIT)
                     }
                 }
             }
