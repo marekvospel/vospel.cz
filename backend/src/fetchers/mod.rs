@@ -2,11 +2,11 @@ use crate::fetchers::stackoverflow::structs::{StackOverflowResponse, StackOverfl
 
 mod stackoverflow;
 
-pub(crate) fn run_fetchers() -> Result<(), reqwest::Error> {
+pub(crate) async fn run_fetchers() -> Result<(), reqwest::Error> {
   let result =
-    reqwest::blocking::get("https://api.stackexchange.com/users/15453477?site=stackoverflow")?;
+    reqwest::get("https://api.stackexchange.com/users/15453477?site=stackoverflow").await?;
 
-  let stack: StackOverflowResponse<StackOverflowUser> = result.json()?;
+  let stack: StackOverflowResponse<StackOverflowUser> = result.json().await?;
 
   println!("{:?}", stack);
 
