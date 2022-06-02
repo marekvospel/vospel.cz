@@ -5,6 +5,7 @@ use rocket::State;
 use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize)]
+#[serde(untagged)]
 pub(crate) enum StatsResponse {
   Ok(Option<StackOverflowUser>),
   None,
