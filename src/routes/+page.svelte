@@ -6,6 +6,13 @@
   import NavBar from '$lib/NavBar.svelte'
 </script>
 
+<svelte:head>
+  <title>Marek Vospěl</title>
+  <meta name="og:title" content="Marek Vospěl">
+  <meta name="description" content="Marek Vospěl, web developer and cybersecurity student from Czech Republic">
+  <meta name="og:description" content="Marek Vospěl, web developer and cybersecurity student from Czech Republic">
+</svelte:head>
+
 <NavBar />
 <div
   id="content" class="
