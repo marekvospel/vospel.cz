@@ -8,7 +8,7 @@
   "automergeType": "pr",
   "packageRules": [
     {
-      "matchDepNames": ["pnpm"],
+      "matchPackageNames": ["pnpm"],
       "automerge": true,
       "automergeType": "branch"
     },
