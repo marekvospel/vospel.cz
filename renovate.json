@@ -4,5 +4,22 @@
     "config:base",
     ":preserveSemverRanges",
     ":disableDependencyDashboard"
+  ],
+  "automergeType": "pr",
+  "packageRules": [
+    {
+      "matchDepNames": ["pnpm"],
+      "automerge": true,
+      "automergeType": "branch"
+    },
+    {
+      "matchDepTypes": ["devDependencies"],
+      "automerge": true
+    },
+    {
+      "matchDepTypes": ["dependencies"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
+    }
   ]
 }
