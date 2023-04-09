@@ -17,8 +17,8 @@ devDependencies:
     specifier: ^1.0.0-next.492
     version: 1.9.2(svelte@3.55.1)(vite@4.1.4)
   '@unocss/reset':
-    specifier: ^0.50.0
-    version: 0.50.3
+    specifier: ^0.51.0
+    version: 0.51.0
   '@vospel/eslint-config':
     specifier: 1.5.0
     version: 1.5.0(eslint@8.35.0)
@@ -800,10 +800,6 @@ packages:
     dependencies:
       '@unocss/core': 0.51.0
       '@unocss/preset-mini': 0.51.0
-    dev: true
-
-  /@unocss/reset@0.50.3:
-    resolution: {integrity: sha512-bHzHMPHtwSFKnQOEgJDcm/TNyH7L7Mx7xIznDDp2YPTHfb+s98DpVhXxMSjopNSggB7+X8s8UskL08iSI8pjRQ==}
     dev: true
 
   /@unocss/reset@0.51.0:
