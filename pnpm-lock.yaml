@@ -1,6 +1,9 @@
 lockfileVersion: '6.0'
 
 devDependencies:
+  '@iconify-json/cib':
+    specifier: ^1.1.4
+    version: 1.1.4
   '@iconify-json/mdi':
     specifier: ^1.1.33
     version: 1.1.48
@@ -350,6 +353,12 @@ packages:
 
   /@humanwhocodes/object-schema@1.2.1:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
+    dev: true
+
+  /@iconify-json/cib@1.1.4:
+    resolution: {integrity: sha512-jbZDo/5UMqu08J+2Ov3uCubO2zVgiLNb+ufo/+9r9gIVigd4dTCAXA15KkEZRdP5mIFZIjZ7k7A1LlDU7nuifA==}
+    dependencies:
+      '@iconify/types': 2.0.0
     dev: true
 
   /@iconify-json/mdi@1.1.48:

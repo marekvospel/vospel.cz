@@ -11,6 +11,7 @@
 		"lint": "eslint ."
 	},
 	"devDependencies": {
+		"@iconify-json/cib": "^1.1.4",
 		"@iconify-json/mdi": "^1.1.33",
 		"@iconify-json/twemoji": "^1.1.5",
 		"@sveltejs/adapter-auto": "^2.0.0",
