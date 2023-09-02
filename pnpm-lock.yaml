@@ -54,8 +54,8 @@ devDependencies:
     specifier: ^0.55.0
     version: 0.55.4(postcss@8.4.29)(vite@4.4.9)
   unplugin-icons:
-    specifier: ^0.16.0
-    version: 0.16.6
+    specifier: ^0.17.0
+    version: 0.17.0
   vite:
     specifier: ^4.0.0
     version: 4.4.9
@@ -2620,8 +2620,8 @@ packages:
       - supports-color
     dev: true
 
-  /unplugin-icons@0.16.6:
-    resolution: {integrity: sha512-jL70sAC7twp4hI/MTfm+vyvTRtHqiEIzf3XOjJz7yzhMEEQnk5Ey5YIXRAU03Mc4BF99ITvvnBzfyRZee86OeA==}
+  /unplugin-icons@0.17.0:
+    resolution: {integrity: sha512-gMv66eY/Hj64heM55XrfDH3LUCWI51mtkBVUPVl9VkpvLgAYhdVe9nRuzu6p+idmCLSQVq7xiPxQcD4aXCgW5A==}
     peerDependencies:
       '@svgr/core': '>=7.0.0'
       '@svgx/core': ^1.0.1
