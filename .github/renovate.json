@@ -10,8 +10,7 @@
   "packageRules": [
     {
       "matchPackageNames": ["pnpm"],
-      "automerge": true,
-      "automergeType": "branch"
+      "enabled": false
     },
     {
       "matchDepTypes": ["devDependencies"],
@@ -22,11 +21,5 @@
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true
     }
-  ],
-  "lockFileMaintenance": {
-    "enabled": true,
-    "automerge": true,
-    "automergeType": "branch",
-    "schedule": ["on the first day of the month"]
-  }
+  ]
 }
