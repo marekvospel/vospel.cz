@@ -20,7 +20,7 @@
 		"@unocss/reset": "^0.63.0",
 		"@vospel/eslint-config": "1.5.0",
 		"eslint": "^8.23.1",
-		"svelte": "^4.0.0",
+		"svelte": "^5.0.0",
 		"svelte-check": "^4.0.0",
 		"svelte-i18n": "^4.0.0",
 		"svelte-preprocess": "^6.0.0",
