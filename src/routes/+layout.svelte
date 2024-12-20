@@ -1,3 +1,7 @@
+<script lang="ts">
+  let { children } = $props()
+</script>
+
 <svelte:head>
   <title>Marek Vospěl</title>
   <meta name="og:title" content="Marek Vospěl">
@@ -11,7 +15,7 @@
 
 <a href="#content" class="absolute px-4 py-2 bg-dark-200 translate-x-[-100%] focus:translate-0">Jump to content</a>
 <main class="flex flex-col m-auto mx-4 my-2">
-  <slot />
+  {@render children?.()}
 </main>
 
 <style global>

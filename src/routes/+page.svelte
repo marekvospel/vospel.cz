@@ -26,7 +26,7 @@
   <p>Hey my name is Marek and I'm a full stack developer and cybersecurity student working at
     <a href="https://haxagon.cz" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-200 transition-color duration-300">Haxagon</a>
   </p>
-  <div class="h-4"/>
+  <div class="h-4"></div>
   <p>I'm a big fan of opensource software and I try to make my projects opensource whenever possible. See my
     <a
       href="https://github.com/marekvospel" target="_blank" rel="noopener noreferrer"
@@ -39,7 +39,7 @@
     </a>
   </p>
   <p>In my free time I do sports climbing <span class="inline-flex flex items-center"><TwemojiManClimbing /></span>, biking <span class="inline-flex flex items-center"><TwemojiManBiking /></span> and skiing <span class="inline-flex flex items-center"><TwemojiSkier /></span></p>
-  <div class="h-4" />
+  <div class="h-4"></div>
   <p>I'm writing my own blog about cybersecurity.</p>
   <a href="https://blog.vospel.cz">
     <button type="button" class="px-4 py-1 rounded-xl bg-cyan-500 hover:bg-cyan-400 transition-color duration-300">Read</button>
