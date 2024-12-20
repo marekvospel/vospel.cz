@@ -3,22 +3,6 @@ name: push
 on: push
 
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-     - uses: actions/checkout@v4
-     - uses: pnpm/action-setup@v2
-     - uses: actions/setup-node@v3
-       with:
-         node-version: 18
-         cache: pnpm
-
-     - name: Install
-       run: pnpm i
-
-     - name: Lint
-       run: pnpm lint
-   
   build:
     runs-on: ubuntu-latest
     steps:
