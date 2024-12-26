@@ -8,15 +8,27 @@ importers:
 
   .:
     devDependencies:
+      '@iconify-json/bx':
+        specifier: ^1.2.2
+        version: 1.2.2
+      '@iconify-json/bxs':
+        specifier: ^1.2.2
+        version: 1.2.2
+      '@iconify-json/cib':
+        specifier: ^1.2.2
+        version: 1.2.2
       '@sveltejs/adapter-node':
         specifier: ^5.2.11
-        version: 5.2.11(@sveltejs/kit@2.15.0(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.16.0)(vite@6.0.5(jiti@2.4.2)(tsx@4.19.2)))(svelte@5.16.0)(vite@6.0.5(jiti@2.4.2)(tsx@4.19.2)))
+        version: 5.2.11(@sveltejs/kit@2.15.0(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.16.0)(vite@6.0.5(@types/node@22.10.2)(jiti@2.4.2)(tsx@4.19.2)))(svelte@5.16.0)(vite@6.0.5(@types/node@22.10.2)(jiti@2.4.2)(tsx@4.19.2)))
       '@sveltejs/kit':
         specifier: ^2.0.0
-        version: 2.15.0(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.16.0)(vite@6.0.5(jiti@2.4.2)(tsx@4.19.2)))(svelte@5.16.0)(vite@6.0.5(jiti@2.4.2)(tsx@4.19.2))
+        version: 2.15.0(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.16.0)(vite@6.0.5(@types/node@22.10.2)(jiti@2.4.2)(tsx@4.19.2)))(svelte@5.16.0)(vite@6.0.5(@types/node@22.10.2)(jiti@2.4.2)(tsx@4.19.2))
       '@sveltejs/vite-plugin-svelte':
         specifier: ^5.0.3
-        version: 5.0.3(svelte@5.16.0)(vite@6.0.5(jiti@2.4.2)(tsx@4.19.2))
+        version: 5.0.3(svelte@5.16.0)(vite@6.0.5(@types/node@22.10.2)(jiti@2.4.2)(tsx@4.19.2))
+      '@types/node':
+        specifier: ^22.10.2
+        version: 22.10.2
       '@unocss/reset':
         specifier: ^0.65.3
         version: 0.65.3
@@ -43,13 +55,13 @@ importers:
         version: 5.7.2
       unocss:
         specifier: ^0.65.3
-        version: 0.65.3(postcss@8.4.49)(rollup@4.29.1)(vite@6.0.5(jiti@2.4.2)(tsx@4.19.2))(vue@3.5.13(typescript@5.7.2))
+        version: 0.65.3(postcss@8.4.49)(rollup@4.29.1)(vite@6.0.5(@types/node@22.10.2)(jiti@2.4.2)(tsx@4.19.2))(vue@3.5.13(typescript@5.7.2))
       vite:
         specifier: ^6.0.5
-        version: 6.0.5(jiti@2.4.2)(tsx@4.19.2)
+        version: 6.0.5(@types/node@22.10.2)(jiti@2.4.2)(tsx@4.19.2)
       vite-plugin-inspect:
         specifier: ^0.10.6
-        version: 0.10.6(rollup@4.29.1)(vite@6.0.5(jiti@2.4.2)(tsx@4.19.2))
+        version: 0.10.6(rollup@4.29.1)(vite@6.0.5(@types/node@22.10.2)(jiti@2.4.2)(tsx@4.19.2))
 
 packages:
 
@@ -659,6 +671,15 @@ packages:
   '@formatjs/intl-localematcher@0.5.9':
     resolution: {integrity: sha512-8zkGu/sv5euxbjfZ/xmklqLyDGQSxsLqg8XOq88JW3cmJtzhCP8EtSJXlaKZnVO4beEaoiT9wj4eIoCQ9smwxA==}
 
+  '@iconify-json/bx@1.2.2':
+    resolution: {integrity: sha512-hZVx6LMEkYckScdRdUuQWcmv8Lm2au6Cnf799TLoR6YgiAfFvaJ4M5ElwcnExvCu8ntsS7jW89r0W5LwBAfZXQ==}
+
+  '@iconify-json/bxs@1.2.2':
+    resolution: {integrity: sha512-uqQsDJDi9h+kjtKmx8IHZCO9tbLR3ff3GN+T5fTaNfxU4EnNX07iWF3kZfzyDZtrVgZNjR0ZIkdj3NfYf5rS4A==}
+
+  '@iconify-json/cib@1.2.2':
+    resolution: {integrity: sha512-WevYDdIm0x3I3YZyoIgdSu4uurbzs2b2gsMLUj8/EMKMoPIx6GF+t0VcaCgFY4a0rIdUY18MYP6m9XgcOhOtFg==}
+
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
 
@@ -851,6 +872,9 @@ packages:
 
   '@types/estree@1.0.6':
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
+
+  '@types/node@22.10.2':
+    resolution: {integrity: sha512-Xxr6BBRCAOQixvonOye19wnzyDiUtTeqldOOmj3CkeblonbccA12PFwlufvRdrpjXxqnmUaeiU5EOA+7s5diUQ==}
 
   '@types/resolve@1.20.2':
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
@@ -1484,6 +1508,9 @@ packages:
   unconfig@0.6.0:
     resolution: {integrity: sha512-4C67J0nIF2QwSXty2kW3zZx1pMZ3iXabylvJWWgHybWVUcMf9pxwsngoQt0gC+AVstRywFqrRBp3qOXJayhpOw==}
 
+  undici-types@6.20.0:
+    resolution: {integrity: sha512-Ny6QZ2Nju20vw1SRHe3d9jVu6gJ+4e3+MMpqu7pqE5HT6WsTSlce++GQmK5UXS8mzV8DSYHrQH+Xrf2jVcuKNg==}
+
   universalify@2.0.1:
     resolution: {integrity: sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw==}
     engines: {node: '>= 10.0.0'}
@@ -1909,6 +1936,18 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
+  '@iconify-json/bx@1.2.2':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/bxs@1.2.2':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/cib@1.2.2':
+    dependencies:
+      '@iconify/types': 2.0.0
+
   '@iconify/types@2.0.0': {}
 
   '@iconify/utils@2.2.1':
@@ -2036,17 +2075,17 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.29.1':
     optional: true
 
-  '@sveltejs/adapter-node@5.2.11(@sveltejs/kit@2.15.0(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.16.0)(vite@6.0.5(jiti@2.4.2)(tsx@4.19.2)))(svelte@5.16.0)(vite@6.0.5(jiti@2.4.2)(tsx@4.19.2)))':
+  '@sveltejs/adapter-node@5.2.11(@sveltejs/kit@2.15.0(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.16.0)(vite@6.0.5(@types/node@22.10.2)(jiti@2.4.2)(tsx@4.19.2)))(svelte@5.16.0)(vite@6.0.5(@types/node@22.10.2)(jiti@2.4.2)(tsx@4.19.2)))':
     dependencies:
       '@rollup/plugin-commonjs': 28.0.2(rollup@4.29.1)
       '@rollup/plugin-json': 6.1.0(rollup@4.29.1)
       '@rollup/plugin-node-resolve': 16.0.0(rollup@4.29.1)
-      '@sveltejs/kit': 2.15.0(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.16.0)(vite@6.0.5(jiti@2.4.2)(tsx@4.19.2)))(svelte@5.16.0)(vite@6.0.5(jiti@2.4.2)(tsx@4.19.2))
+      '@sveltejs/kit': 2.15.0(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.16.0)(vite@6.0.5(@types/node@22.10.2)(jiti@2.4.2)(tsx@4.19.2)))(svelte@5.16.0)(vite@6.0.5(@types/node@22.10.2)(jiti@2.4.2)(tsx@4.19.2))
       rollup: 4.29.1
 
-  '@sveltejs/kit@2.15.0(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.16.0)(vite@6.0.5(jiti@2.4.2)(tsx@4.19.2)))(svelte@5.16.0)(vite@6.0.5(jiti@2.4.2)(tsx@4.19.2))':
+  '@sveltejs/kit@2.15.0(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.16.0)(vite@6.0.5(@types/node@22.10.2)(jiti@2.4.2)(tsx@4.19.2)))(svelte@5.16.0)(vite@6.0.5(@types/node@22.10.2)(jiti@2.4.2)(tsx@4.19.2))':
     dependencies:
-      '@sveltejs/vite-plugin-svelte': 5.0.3(svelte@5.16.0)(vite@6.0.5(jiti@2.4.2)(tsx@4.19.2))
+      '@sveltejs/vite-plugin-svelte': 5.0.3(svelte@5.16.0)(vite@6.0.5(@types/node@22.10.2)(jiti@2.4.2)(tsx@4.19.2))
       '@types/cookie': 0.6.0
       cookie: 0.6.0
       devalue: 5.1.1
@@ -2060,27 +2099,27 @@ snapshots:
       sirv: 3.0.0
       svelte: 5.16.0
       tiny-glob: 0.2.9
-      vite: 6.0.5(jiti@2.4.2)(tsx@4.19.2)
+      vite: 6.0.5(@types/node@22.10.2)(jiti@2.4.2)(tsx@4.19.2)
 
-  '@sveltejs/vite-plugin-svelte-inspector@4.0.1(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.16.0)(vite@6.0.5(jiti@2.4.2)(tsx@4.19.2)))(svelte@5.16.0)(vite@6.0.5(jiti@2.4.2)(tsx@4.19.2))':
+  '@sveltejs/vite-plugin-svelte-inspector@4.0.1(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.16.0)(vite@6.0.5(@types/node@22.10.2)(jiti@2.4.2)(tsx@4.19.2)))(svelte@5.16.0)(vite@6.0.5(@types/node@22.10.2)(jiti@2.4.2)(tsx@4.19.2))':
     dependencies:
-      '@sveltejs/vite-plugin-svelte': 5.0.3(svelte@5.16.0)(vite@6.0.5(jiti@2.4.2)(tsx@4.19.2))
+      '@sveltejs/vite-plugin-svelte': 5.0.3(svelte@5.16.0)(vite@6.0.5(@types/node@22.10.2)(jiti@2.4.2)(tsx@4.19.2))
       debug: 4.4.0
       svelte: 5.16.0
-      vite: 6.0.5(jiti@2.4.2)(tsx@4.19.2)
+      vite: 6.0.5(@types/node@22.10.2)(jiti@2.4.2)(tsx@4.19.2)
     transitivePeerDependencies:
       - supports-color
 
-  '@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.16.0)(vite@6.0.5(jiti@2.4.2)(tsx@4.19.2))':
+  '@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.16.0)(vite@6.0.5(@types/node@22.10.2)(jiti@2.4.2)(tsx@4.19.2))':
     dependencies:
-      '@sveltejs/vite-plugin-svelte-inspector': 4.0.1(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.16.0)(vite@6.0.5(jiti@2.4.2)(tsx@4.19.2)))(svelte@5.16.0)(vite@6.0.5(jiti@2.4.2)(tsx@4.19.2))
+      '@sveltejs/vite-plugin-svelte-inspector': 4.0.1(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.16.0)(vite@6.0.5(@types/node@22.10.2)(jiti@2.4.2)(tsx@4.19.2)))(svelte@5.16.0)(vite@6.0.5(@types/node@22.10.2)(jiti@2.4.2)(tsx@4.19.2))
       debug: 4.4.0
       deepmerge: 4.3.1
       kleur: 4.1.5
       magic-string: 0.30.17
       svelte: 5.16.0
-      vite: 6.0.5(jiti@2.4.2)(tsx@4.19.2)
-      vitefu: 1.0.4(vite@6.0.5(jiti@2.4.2)(tsx@4.19.2))
+      vite: 6.0.5(@types/node@22.10.2)(jiti@2.4.2)(tsx@4.19.2)
+      vitefu: 1.0.4(vite@6.0.5(@types/node@22.10.2)(jiti@2.4.2)(tsx@4.19.2))
     transitivePeerDependencies:
       - supports-color
 
@@ -2088,15 +2127,19 @@ snapshots:
 
   '@types/estree@1.0.6': {}
 
+  '@types/node@22.10.2':
+    dependencies:
+      undici-types: 6.20.0
+
   '@types/resolve@1.20.2': {}
 
-  '@unocss/astro@0.65.3(rollup@4.29.1)(vite@6.0.5(jiti@2.4.2)(tsx@4.19.2))(vue@3.5.13(typescript@5.7.2))':
+  '@unocss/astro@0.65.3(rollup@4.29.1)(vite@6.0.5(@types/node@22.10.2)(jiti@2.4.2)(tsx@4.19.2))(vue@3.5.13(typescript@5.7.2))':
     dependencies:
       '@unocss/core': 0.65.3
       '@unocss/reset': 0.65.3
-      '@unocss/vite': 0.65.3(rollup@4.29.1)(vite@6.0.5(jiti@2.4.2)(tsx@4.19.2))(vue@3.5.13(typescript@5.7.2))
+      '@unocss/vite': 0.65.3(rollup@4.29.1)(vite@6.0.5(@types/node@22.10.2)(jiti@2.4.2)(tsx@4.19.2))(vue@3.5.13(typescript@5.7.2))
     optionalDependencies:
-      vite: 6.0.5(jiti@2.4.2)(tsx@4.19.2)
+      vite: 6.0.5(@types/node@22.10.2)(jiti@2.4.2)(tsx@4.19.2)
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -2235,7 +2278,7 @@ snapshots:
     dependencies:
       '@unocss/core': 0.65.3
 
-  '@unocss/vite@0.65.3(rollup@4.29.1)(vite@6.0.5(jiti@2.4.2)(tsx@4.19.2))(vue@3.5.13(typescript@5.7.2))':
+  '@unocss/vite@0.65.3(rollup@4.29.1)(vite@6.0.5(@types/node@22.10.2)(jiti@2.4.2)(tsx@4.19.2))(vue@3.5.13(typescript@5.7.2))':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@rollup/pluginutils': 5.1.4(rollup@4.29.1)
@@ -2245,7 +2288,7 @@ snapshots:
       chokidar: 3.6.0
       magic-string: 0.30.17
       tinyglobby: 0.2.10
-      vite: 6.0.5(jiti@2.4.2)(tsx@4.19.2)
+      vite: 6.0.5(@types/node@22.10.2)(jiti@2.4.2)(tsx@4.19.2)
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -2922,11 +2965,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  undici-types@6.20.0: {}
+
   universalify@2.0.1: {}
 
-  unocss@0.65.3(postcss@8.4.49)(rollup@4.29.1)(vite@6.0.5(jiti@2.4.2)(tsx@4.19.2))(vue@3.5.13(typescript@5.7.2)):
+  unocss@0.65.3(postcss@8.4.49)(rollup@4.29.1)(vite@6.0.5(@types/node@22.10.2)(jiti@2.4.2)(tsx@4.19.2))(vue@3.5.13(typescript@5.7.2)):
     dependencies:
-      '@unocss/astro': 0.65.3(rollup@4.29.1)(vite@6.0.5(jiti@2.4.2)(tsx@4.19.2))(vue@3.5.13(typescript@5.7.2))
+      '@unocss/astro': 0.65.3(rollup@4.29.1)(vite@6.0.5(@types/node@22.10.2)(jiti@2.4.2)(tsx@4.19.2))(vue@3.5.13(typescript@5.7.2))
       '@unocss/cli': 0.65.3(rollup@4.29.1)
       '@unocss/core': 0.65.3
       '@unocss/postcss': 0.65.3(postcss@8.4.49)
@@ -2942,16 +2987,16 @@ snapshots:
       '@unocss/transformer-compile-class': 0.65.3
       '@unocss/transformer-directives': 0.65.3
       '@unocss/transformer-variant-group': 0.65.3
-      '@unocss/vite': 0.65.3(rollup@4.29.1)(vite@6.0.5(jiti@2.4.2)(tsx@4.19.2))(vue@3.5.13(typescript@5.7.2))
+      '@unocss/vite': 0.65.3(rollup@4.29.1)(vite@6.0.5(@types/node@22.10.2)(jiti@2.4.2)(tsx@4.19.2))(vue@3.5.13(typescript@5.7.2))
     optionalDependencies:
-      vite: 6.0.5(jiti@2.4.2)(tsx@4.19.2)
+      vite: 6.0.5(@types/node@22.10.2)(jiti@2.4.2)(tsx@4.19.2)
     transitivePeerDependencies:
       - postcss
       - rollup
       - supports-color
       - vue
 
-  vite-plugin-inspect@0.10.6(rollup@4.29.1)(vite@6.0.5(jiti@2.4.2)(tsx@4.19.2)):
+  vite-plugin-inspect@0.10.6(rollup@4.29.1)(vite@6.0.5(@types/node@22.10.2)(jiti@2.4.2)(tsx@4.19.2)):
     dependencies:
       '@antfu/utils': 0.7.10
       '@rollup/pluginutils': 5.1.4(rollup@4.29.1)
@@ -2962,24 +3007,25 @@ snapshots:
       perfect-debounce: 1.0.0
       picocolors: 1.1.1
       sirv: 3.0.0
-      vite: 6.0.5(jiti@2.4.2)(tsx@4.19.2)
+      vite: 6.0.5(@types/node@22.10.2)(jiti@2.4.2)(tsx@4.19.2)
     transitivePeerDependencies:
       - rollup
       - supports-color
 
-  vite@6.0.5(jiti@2.4.2)(tsx@4.19.2):
+  vite@6.0.5(@types/node@22.10.2)(jiti@2.4.2)(tsx@4.19.2):
     dependencies:
       esbuild: 0.24.0
       postcss: 8.4.49
       rollup: 4.29.1
     optionalDependencies:
+      '@types/node': 22.10.2
       fsevents: 2.3.3
       jiti: 2.4.2
       tsx: 4.19.2
 
-  vitefu@1.0.4(vite@6.0.5(jiti@2.4.2)(tsx@4.19.2)):
+  vitefu@1.0.4(vite@6.0.5(@types/node@22.10.2)(jiti@2.4.2)(tsx@4.19.2)):
     optionalDependencies:
-      vite: 6.0.5(jiti@2.4.2)(tsx@4.19.2)
+      vite: 6.0.5(@types/node@22.10.2)(jiti@2.4.2)(tsx@4.19.2)
 
   vue-flow-layout@0.1.1(vue@3.5.13(typescript@5.7.2)):
     dependencies:

@@ -10,9 +10,9 @@
 
 .v-container {
   @apply w-full h-full px-4 py-2 mx-auto;
-  @apply sm:max-w-[640px] md:max-w-[768px];
-  @apply lg:(max-w-[1024px] px-8 py-4);
-  @apply xl:max-w-[1280px] 2xl:max-w-[1536px];
+  @apply sm:max-w-[540px] md:max-w-[650px];
+  @apply lg:(max-w-[900px] px-8 py-4);
+  @apply xl:max-w-[1080px] 2xl:max-w-[1400px];
 }
 
 </style>

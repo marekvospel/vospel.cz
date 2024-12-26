@@ -11,8 +11,8 @@
 <style lang="postcss">
 
 button {
-  @apply flex flex-row gap-2;
-  @apply px-4 py-2 rounded-lg border-2;
+  @apply flex flex-row gap-2 items-center;
+  @apply px-4 py-2 rounded-lg border;
   @apply text-white/65;
   @apply transition-colors duration-300;
   @apply outline-none;
