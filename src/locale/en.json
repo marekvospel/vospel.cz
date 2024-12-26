@@ -1,5 +1,11 @@
 {
-  "vospel": {
-
-  }
+  "vospel.introduction.paragraph1.1": "Hey, my name is Marek Vospěl and I'm a full-stack developer and student at ",
+  "vospel.introduction.paragraph1.2": "passionate about writing secure and clean code. While I'm fast to adapt to any development environment, I especially enjoy low level development and learning about how both computers and programming languages work.",
+  "vospel.introduction.paragraph2": "My computer science journey began with scratch apps at the age of 10, after learning javascript I went to high school teaching cybersecurity, where I attended many CTF competitions. (I placed 17. place in Czech national CSC and our high school team 33rd in DarkCon CTF) Being a big opensource fan I use linux for work and try to contribute to every project I can get my hands on.",
+  "vospel.introduction.paragraph3": "Beyond computers I love to do sports like climbing, swimming, biking, snowboard and skiing and I'm trying to learn 日本語 (Japanese).",
+  "vospel.links.github": "Github",
+  "vospel.links.blog": "Blog",
+  "vospel.links.linkedin": "LinkedIn",
+  "vospel.links.matrix": "Matrix",
+  "vospel.links.mastodon": "Mastodon"
 }

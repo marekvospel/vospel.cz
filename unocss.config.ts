@@ -1,4 +1,4 @@
-import { defineConfig, presetUno, transformerDirectives, presetIcons } from 'unocss'
+import { defineConfig, presetUno, transformerDirectives, presetIcons, presetWebFonts } from 'unocss'
 import * as fs from 'node:fs/promises'
 
 export default defineConfig({
@@ -11,6 +11,22 @@ export default defineConfig({
         }
       }
     }),
+    presetWebFonts({
+      provider: 'bunny',
+      fonts: {
+        sans: [
+          {
+            name: 'Noto Sans',
+            weights: [500, 700],
+          },
+          {
+            name: 'Noto Sans Japanese',
+            weights: [500, 700],
+          },
+        ],
+        mono: ['Fira Code']
+      }
+    })
   ],
   transformers: [
     transformerDirectives(),

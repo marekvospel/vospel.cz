@@ -1,68 +1,92 @@
 <script lang="ts">
-  import { _ } from 'svelte-i18n'
+  import { t } from 'svelte-i18n'
   import VButton from '../lib/components/VButton.svelte'
 	import VContainer from '$lib/components/VContainer.svelte'
 	import VTag from '$lib/components/VTag.svelte';
+	import ProjectTree from '$lib/components/ProjectTree.svelte';
 
 </script>
 
-<VContainer>  
+<VContainer>
 
-  <div class="flex flex-col pl-12 pt-8 lg:pt-16">
+  <div class="flex flex-col pl-12 py-8 lg:py-16">
     <h1 class="relative flex items-center text-3xl">
       <span class="i-bx:info-circle inline-block text-cyan absolute right-[calc(100%+0.25em)]"></span>
       <span>Marek Vospěl</span>
     </h1>
     <p class="max-w-[70ch] my-1.5">
-      Hey, my name is Marek Vospěl and I'm a full-stack developer and student
-      at <a href="https://fit.cvut.cz/en" target="_blank" rel="noopener noreferrer">
+      <span>{ $t('vospel.introduction.paragraph1.1') }</span>
+      <a href="https://fit.cvut.cz/en" target="_blank" rel="noopener noreferrer">
         <VTag><span class="inline-block i-custom:cvut h-[1em] w-[1em]"></span><span class="mt-0.3">FIT-CTU</span></VTag>
       </a>,
-      passionate about writing secure and clean code. While I'm fast to adapt
-      to any development environment, I especially enjoy low level development
-      and learning about how both computers and programming languages work.
+      <span>{ $t('vospel.introduction.paragraph1.2') }</span>
     </p>
 
     <p class="max-w-[70ch] my-1.5">
-      My computer science journey began with scratch apps at the age of 10,
-      after learning javascript I went to high school teaching cybersecurity,
-      where I attended many CTF competitions. (17. place in national CSC, 33rd team in DarkCon CTF)
-      Being a big opensource fan I use linux for work and try to contribute
-      to every project I can get my hands on.
+      { $t('vospel.introduction.paragraph2') }
     </p>
+
     <p class="max-w-[70ch] my-1.5">
-      Beyond computers I love to do sports like climbing, swimming, biking,
-      snowboard and skiing and I'm trying to learn 日本語 (Japanese).
+      { $t('vospel.introduction.paragraph3') }
     </p>
 
   </div>
 
-  <div class="flex flex-row gap-2 items-center flex-wrap">
+  <div class="flex flex-row gap-2 items-center flex-wrap pt-4 lg:pt-8 links">
     <a href="https://github.com/marekvospel" target="_blank" rel="noreferrer noopener me">
-      <VButton>
+      <VButton color="green">
         <span class="inline-block i-cib:github"></span>
-        <span>Github</span>
+        <span>{ $t('vospel.links.github') }</span>
       </VButton>
     </a>
     <a href="https://matrix.to/#marek:vospel.cz" target="_blank" rel="noreferrer noopener me">
       <VButton>
         <span class="inline-block i-cib:matrix"></span>
-        <span>Matrix</span>
+        <span>{ $t('vospel.links.matrix') }</span>
       </VButton>
     </a>
     <a href="https://cyberplace.social/@vospel" target="_blank" rel="noreferrer noopener me">
-      <VButton>
+      <VButton color="violet">
         <span class="inline-block i-cib:mastodon"></span>
-        <span>Mastodon</span>
+        <span>{ $t('vospel.links.mastodon') }</span>
+      </VButton>
+    </a>
+    <a href="https://www.linkedin.com/in/marek-vosp%C4%9Bl-9719b2290/" target="_blank" rel="noreferrer noopener me">
+      <VButton color="blue">
+        <span class="inline-block i-cib:linkedin"></span>
+        <span>{ $t('vospel.links.linkedin') }</span>
       </VButton>
     </a>
     <a href="https://blog.vospel.cz" target="_blank" rel="noreferrer noopener me">
       <VButton>
-        <span>Blog</span>
+        <span>{ $t('vospel.links.blog') }</span>
       </VButton>
     </a>
   </div>
 
+  <div class="pt-8 lg:pt-16">
+    <ProjectTree></ProjectTree>
+  </div>
   
 </VContainer>
+
+<style lang="postcss">
+
+.links {
+  animation: float-right 1.5s ease-in-out;
+}
+
+@keyframes float-right {
+  0% {
+    @apply pl-[10%] opacity-0;
+  }
+  50% {
+    @apply pl-[10%] opacity-0;
+  }
+  100% {
+    @apply pl-0 opacity-100;
+  }
+}
+
+</style>
 

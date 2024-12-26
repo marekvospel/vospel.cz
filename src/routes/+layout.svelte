@@ -4,7 +4,7 @@
 <style lang="postcss">
 
 :global(html) {
-  @apply text-white;
+  @apply text-white font-sans;
 }
 
 :global(body) {
