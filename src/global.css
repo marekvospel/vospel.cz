@@ -1,0 +1,8 @@
+
+html {
+  @apply text-white font-sans;
+}
+
+body {
+  @apply bg-black min-h-[100dvh];
+}

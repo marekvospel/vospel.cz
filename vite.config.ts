@@ -11,7 +11,7 @@ export default defineConfig({
       injectReset: '@unocss/reset/tailwind.css',
 
       cssFileTransformers: [transformerDirectives()],
-      combine: false, // TODO: disable
+      combine: true, // TODO: disable
     }),
     sveltekit(),
   ]

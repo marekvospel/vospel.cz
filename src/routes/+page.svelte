@@ -33,35 +33,25 @@
   </div>
 
   <div class="flex flex-row gap-2 items-center flex-wrap pt-4 lg:pt-8 links">
-    <a href="https://github.com/marekvospel" target="_blank" rel="noreferrer noopener me">
-      <VButton color="green">
-        <span class="inline-block i-cib:github"></span>
-        <span>{ $t('vospel.links.github') }</span>
-      </VButton>
-    </a>
-    <a href="https://matrix.to/#marek:vospel.cz" target="_blank" rel="noreferrer noopener me">
-      <VButton>
-        <span class="inline-block i-cib:matrix"></span>
-        <span>{ $t('vospel.links.matrix') }</span>
-      </VButton>
-    </a>
-    <a href="https://cyberplace.social/@vospel" target="_blank" rel="noreferrer noopener me">
-      <VButton color="violet">
-        <span class="inline-block i-cib:mastodon"></span>
-        <span>{ $t('vospel.links.mastodon') }</span>
-      </VButton>
-    </a>
-    <a href="https://www.linkedin.com/in/marek-vosp%C4%9Bl-9719b2290/" target="_blank" rel="noreferrer noopener me">
-      <VButton color="blue">
-        <span class="inline-block i-cib:linkedin"></span>
-        <span>{ $t('vospel.links.linkedin') }</span>
-      </VButton>
-    </a>
-    <a href="https://blog.vospel.cz" target="_blank" rel="noreferrer noopener me">
-      <VButton>
-        <span>{ $t('vospel.links.blog') }</span>
-      </VButton>
-    </a>
+    <VButton color="green" href="https://github.com/marekvospel" rel="me noreferrer noopener" target="_blank">
+      <span class="inline-block i-cib:github"></span>
+      <span>{ $t('vospel.links.github') }</span>
+    </VButton>
+    <VButton href="https://matrix.to/#/@marek:vospel.cz" rel="me noreferrer noopener" target="_blank">
+      <span class="inline-block i-cib:matrix"></span>
+      <span>{ $t('vospel.links.matrix') }</span>
+    </VButton>
+    <VButton color="violet" href="https://cyberplace.social/@vospel" rel="me noreferrer noopener" target="_blank">
+      <span class="inline-block i-cib:mastodon"></span>
+      <span>{ $t('vospel.links.mastodon') }</span>
+    </VButton>
+    <VButton color="blue" href="https://www.linkedin.com/in/marek-vosp%C4%9Bl-9719b2290/" rel="me noreferrer noopener" target="_blank">
+      <span class="inline-block i-cib:linkedin"></span>
+      <span>{ $t('vospel.links.linkedin') }</span>
+    </VButton>
+    <VButton href="https://blog.vospel.cz" rel="">
+      <span>{ $t('vospel.links.blog') }</span>
+    </VButton>
   </div>
 
   <div class="pt-8 lg:pt-16">

@@ -1,19 +1,37 @@
 <script lang="ts">
-  interface Props {
+  interface LinkButton {
+    href: string
+    target?: string
+    rel?: string
+  }
+
+  type SharedProps = {
     color?: 'cyan' | 'red' | 'violet' | 'blue' | 'green'
     children?: (...args: any[]) => any
   }
 
-  let { children, color = 'cyan' }: Props = $props()
+  type Props = SharedProps | (SharedProps & LinkButton)
+
+  let { children, color = 'cyan', ...props }: Props = $props()
+
+  let href = $derived('href' in props ? props.href : undefined)
+  let target = $derived('href' in props ? props.target : undefined)
+  let rel = $derived('href' in props ? (props.rel ?? 'noreferrer noopener') : undefined)
 </script>
 
-<button color="{color}">
-  {@render children?.() }
-</button>
+{#if href}
+  <a class="button color-{color}" {href} {target} {rel}>
+    {@render children?.() }
+  </a>
+{:else}
+  <button class="button color-{color}">
+    {@render children?.() }
+  </button>
+{/if}
 
 <style lang="postcss">
 
-button {
+.button {
   @apply flex flex-row gap-2 items-center;
   @apply px-4 py-1.75 rounded-lg border;
   @apply text-white/65;
@@ -21,58 +39,58 @@ button {
   @apply outline-none;
 }
 
-button:focus-visible,
-button:hover {
+.button:focus-visible,
+.button:hover {
     @apply border-opacity-70 bg-opacity-15;
 }
 
-[color="cyan"] {
+.color-cyan {
   @apply border-white bg-cyan;
   @apply border-opacity-10 bg-opacity-0;
 }
 
-[color="cyan"]:focus-visible,
-[color="cyan"]:hover {
+.color-cyan:focus-visible,
+.color-cyan:hover {
   @apply border-cyan text-cyan;
 }
 
-[color="red"] {
+.color-red {
   @apply border-white bg-red-500;
   @apply border-opacity-10 bg-opacity-0;
 }
 
-[color="red"]:focus-visible,
-[color="red"]:hover {
+.color-red:focus-visible,
+.color-red:hover {
   @apply border-red-500 text-red-500;
 }
 
-[color="green"] {
+.color-green {
   @apply border-white bg-green-500;
   @apply border-opacity-10 bg-opacity-0;
 }
 
-[color="green"]:focus-visible,
-[color="green"]:hover {
+.color-green:focus-visible,
+.color-green:hover {
   @apply border-green-500 text-green-500;
 }
 
-[color="violet"] {
+.color-violet {
   @apply border-white bg-violet-500;
   @apply border-opacity-10 bg-opacity-0;
 }
 
-[color="violet"]:focus-visible,
-[color="violet"]:hover {
+.color-violet:focus-visible,
+.color-violet:hover {
   @apply border-violet-500 text-violet-500;
 }
 
-[color="blue"] {
+.color-blue {
   @apply border-white bg-blue-500;
   @apply border-opacity-10 bg-opacity-0;
 }
 
-[color="blue"]:focus-visible,
-[color="blue"]:hover {
+.color-blue:focus-visible,
+.color-blue:hover {
   @apply border-blue-500 text-violet-500;
 }
 </style>
