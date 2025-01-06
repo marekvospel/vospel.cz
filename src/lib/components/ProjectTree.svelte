@@ -1,10 +1,11 @@
 
 <div class="flex flex-col gap-12 lg:gap-32 relative py-4">
-  <div class="w-[2px] absolute bg-cyan top-0 bottom-0 lg:left-[50%] lg:transform-[-50%,0]"></div>
+  <div class="w-[2px] absolute bg-teal top-0 bottom-0 lg:left-[50%] lg:transform-[-50%,0]"></div>
   <div class="lg:ml-[50%] px-4">
     <!-- TODO: logo -->
-    <h4 class="font-bold text-xl">
-      Haxagon s.r.o.
+    <h4 class="font-bold text-xl inline-flex flex-row items-center gap-2">
+      <span class="i-custom:haxagon block text-2xl"></span>
+      <span>Haxagon s.r.o.</span>
     </h4>
     <p class="text-white/50 leading-4 text-sm">
       Full-stack developer

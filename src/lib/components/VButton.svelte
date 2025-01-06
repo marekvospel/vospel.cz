@@ -45,13 +45,13 @@
 }
 
 .color-cyan {
-  @apply border-white bg-cyan;
+  @apply border-white bg-teal;
   @apply border-opacity-10 bg-opacity-0;
 }
 
 .color-cyan:focus-visible,
 .color-cyan:hover {
-  @apply border-cyan text-cyan;
+  @apply border-teal text-teal;
 }
 
 .color-red {
@@ -91,6 +91,6 @@
 
 .color-blue:focus-visible,
 .color-blue:hover {
-  @apply border-blue-500 text-violet-500;
+  @apply border-blue-500 text-blue-500;
 }
 </style>

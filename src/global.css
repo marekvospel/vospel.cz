@@ -4,5 +4,5 @@ html {
 }
 
 body {
-  @apply bg-black min-h-[100dvh];
+  @apply bg-gray-950 min-h-[100dvh];
 }

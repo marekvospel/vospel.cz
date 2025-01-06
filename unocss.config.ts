@@ -8,6 +8,7 @@ export default defineConfig({
       collections: {
         custom: {
           cvut: () => fs.readFile('./src/icons/cvut.svg', 'utf-8'),
+          haxagon: () => fs.readFile('./src/icons/haxagon.svg', 'utf-8'),
         }
       }
     }),
