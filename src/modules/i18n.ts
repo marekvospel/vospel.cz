@@ -1,20 +1,33 @@
 import { register, init, locale } from 'svelte-i18n'
 import { browser } from '$app/environment'
 
-export const supportedLocales = ['en', 'cs']
+export interface Locale {
+  id: string
+  title: string
+}
+
+export const supportedLocales: Locale[] = [
+  {
+    id: 'en',
+    title: 'English (US)',
+  },
+  {
+    id: 'cs',
+    title: 'Česky',
+  }]
 
 export function tryLocale(lang: string) {
-  if (supportedLocales?.includes(lang)) {
+  if (supportedLocales?.some(l => l.id === lang)) {
     locale.set(lang)
     return true
   }
   let normalizedLang = lang.split(';')[0]
-  if (supportedLocales?.includes(normalizedLang)) {
+  if (supportedLocales?.some(l => l.id === normalizedLang)) {
     locale.set(lang)
     return true
   }
   normalizedLang = lang.split('-')[0]
-  if (supportedLocales?.includes(normalizedLang)) {
+  if (supportedLocales?.some(l => l.id === normalizedLang)) {
     locale.set(lang)
     return true
   }
@@ -23,7 +36,7 @@ export function tryLocale(lang: string) {
 
 export function initLocale() {
   for (const locale of supportedLocales) {
-    register(locale, () => import(`$locale/${locale}.json`))
+    register(locale.id, () => import(`$locale/${locale.id}.json`))
   }
 
   const defaultLanguage = 'en'

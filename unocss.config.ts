@@ -18,11 +18,11 @@ export default defineConfig({
         sans: [
           {
             name: 'Noto Sans',
-            weights: [500, 700],
+            weights: [500, 600, 700],
           },
           {
             name: 'Noto Sans Japanese',
-            weights: [500, 700],
+            weights: [500, 600, 700],
           },
         ],
         mono: ['Fira Code']

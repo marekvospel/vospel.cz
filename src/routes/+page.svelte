@@ -1,11 +1,27 @@
 <script lang="ts">
-  import { t } from 'svelte-i18n'
+  import { t, locale } from 'svelte-i18n'
   import VHeader from '$lib/components/VHeader.svelte'
-	import VContainer from '$lib/components/VContainer.svelte'
-	import VTag from '$lib/components/VTag.svelte'
-	import ProjectTree from '$lib/components/ProjectTree.svelte'
+	import VContainer from '$lib/components/common/VContainer.svelte'
+	import VTag from '$lib/components/common/VTag.svelte'
 	import TerminalWindow from '$lib/components/backdrops/TerminalWindow.svelte'
+	import VSelect from '$lib/components/common/VSelect.svelte'
+	import { supportedLocales } from '../modules/i18n'
+	import { onMount } from 'svelte'
+  import { goto } from '$app/navigation'
 
+  let currentLocale: string | undefined = $state()
+
+  $effect(() => {
+    if (currentLocale) {
+      window.localStorage.setItem('locale', currentLocale!)
+      locale.set(currentLocale!)
+      goto(`?locale=${encodeURIComponent(currentLocale)}`)
+    }
+  })
+
+  onMount(() => {
+    currentLocale = window.localStorage.getItem('locale') ?? undefined
+  })
 </script>
 
 <VHeader></VHeader>
@@ -51,11 +67,24 @@
     </div>
   </section> 
 
-  <section>
+  <!--<section>
     <div class="pt-8 lg:pt-16">
       <ProjectTree></ProjectTree>
     </div>
-  </section>
+  </section>-->
+
+  <footer class="flex flex-row gap-4 items-center flex-wrap text-stone-600">
+    <p class="text-stone-600 uppercase font-semibold">{ $t('vospel.footer.copy.name') } &copy; 2025 - { $t('vospel.footer.copy.present') }</p>
+    <VSelect options={supportedLocales.map(l => ({ value: l.id, title: l.title }))} bind:value={currentLocale}>
+      {#snippet children()}
+        <span class="inline-flex i-bx:world"></span>
+        <span>{ supportedLocales.find(l => l.id === currentLocale)?.title ?? supportedLocales.find(l => l.id === 'en')!.title }</span>
+      {/snippet}
+      {#snippet optionSnippet(option, select)}
+        <a onclick={(event) => { event.preventDefault(); select(option.value)} } type="button" class="w-full text-left" href="?locale={option.value}">{ option.title }</a>
+      {/snippet}
+    </VSelect>
+  </footer>
   
 </VContainer>
 

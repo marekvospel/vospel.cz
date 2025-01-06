@@ -7,5 +7,7 @@
   "vospel.links.blog": "Blog",
   "vospel.links.linkedin": "LinkedIn",
   "vospel.links.matrix": "Matrix",
-  "vospel.links.mastodon": "Mastodon"
+  "vospel.links.mastodon": "Mastodon",
+  "vospel.footer.copy.name": "Marek Vospěl",
+  "vospel.footer.copy.present": "present"
 }

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import VButton from '$lib/components/VButton.svelte'
+  import VButton from '$lib/components/common/VButton.svelte'
   import { t } from 'svelte-i18n'
 </script>
 
