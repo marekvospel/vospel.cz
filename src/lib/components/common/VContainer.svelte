@@ -6,7 +6,7 @@
   {@render children?.()}
 </div>
 
-<style lang="postcss">
+<style>
 
 .v-container {
   @apply w-full h-full px-4 py-2 mx-auto;

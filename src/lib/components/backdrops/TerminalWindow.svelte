@@ -8,8 +8,7 @@
   {@render children?.()}
 </div>
 
-<style lang="postcss">
-
+<style>
 .terminal :global(.cursor::before) {
   @apply content-['_'] bg-white;
   animation: blink 1s infinite;

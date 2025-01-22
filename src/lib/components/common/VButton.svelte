@@ -29,7 +29,7 @@
   </button>
 {/if}
 
-<style lang="postcss">
+<style>
 
 .button {
   @apply flex flex-row gap-2 items-center;

@@ -28,8 +28,7 @@
   </div>
 </header>
 
-<style lang="postcss">
-
+<style>
 .links {
   animation: float-right 1.5s ease-in-out;
 }

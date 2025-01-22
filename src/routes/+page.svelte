@@ -88,7 +88,7 @@
   
 </VContainer>
 
-<style lang="postcss">
+<style>
 
 .inset-blur {
   box-shadow: inset 0px 0px 200px 125px theme('colors.gray.950')bf;
